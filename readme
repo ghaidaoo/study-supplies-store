@@ -1,0 +1,57 @@
+# 📚 StudySpace - متجر المستلزمات الدراسية الهادئة
+
+مشروع متجر إلكتروني متكامل للمستلزمات الدراسية والمكتبية مبني باستخدام **Laravel** ومصمم باتباع فلسفة **Calm Commerce** المستوحاة من نظام تصميم **Google Stitch**.
+
+---
+
+## 🎨 الهوية والتصميم (Design System)
+
+تم الاعتماد على الألوان الهادئة لتقليل الإجهاد البصري وتوفير بيئة تصفح مريحة للطلاب:
+- **اللون الرئيسي (Primary):** `#49654d` (أخضر هادئ)
+- **خلفية الموقع (Background):** `#fcf9f2` (كريمي ناعم)
+- **الكروت والعناصر (Surface Muted):** `#f4f1ea`
+- **الخط الأساسي:** Inter
+
+---
+
+## 🛠️ التقنيات المستخدمة (Tech Stack)
+
+- **Framework:** Laravel 10 / 11
+- **Styling:** Tailwind CSS + Google Material Symbols
+- **Database:** SQLite / MySQL
+- **Environment:** GitHub Codespaces
+
+---
+
+## 🚀 المميزات والصفحات المنفذة
+
+1. **الصفحة الرئيسية (`welcome.blade.php`):**
+   - بنر ترحيبي تفاعلي بخلفية مكتبة دراسية مع نصوص بارزة.
+   - عرض ديناميكي للتصنيفات والمنتجات المجلوبة من قاعدة البيانات.
+   - تصميم تجاوبي (Responsive Layout) مخصص لكافة الشاشات.
+
+2. **صفحة تفاصيل المنتج (`product-detail.blade.php`):**
+   - عرض صور المنتجات بدقة عالية مع معروضات جانبة.
+   - تفاصيل المنتج المباشرة (السعر، الوصف، الكمية المتاحة).
+   - قوائم ممتدة (Accordions) لتفاصيل المواصفات والتقييمات.
+
+---
+
+## ⚙️ طريقة التشغيل محلياً
+
+```bash
+# 1. استنساخ المشروع
+git clone [https://github.com/your-username/StudySpace.git](https://github.com/your-username/StudySpace.git)
+
+# 2. تثبيت الحزم
+composer install
+
+# 3. إعداد ملف البيئة
+cp .env.example .env
+php artisan key:generate
+
+# 4. تشغيل الهجرات والبيانات الأولية
+php artisan migrate --seed
+
+# 5. تشغيل السيرفر
+php artisan serve
