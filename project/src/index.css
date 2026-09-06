@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { font-family: 'DM Sans', sans-serif; color: #1f2822; background: #fbf9f4; font-synthesis: none; }
+html { scroll-behavior: smooth; }
+body { margin: 0; min-width: 320px; }
+button, a { -webkit-tap-highlight-color: transparent; }
+button { cursor: pointer; }
+
+@layer components {
+  .font-display { font-family: 'Fraunces', serif; }
+  .announcement { @apply bg-sage px-4 py-2 text-center text-[10px] font-semibold uppercase tracking-[0.16em] text-cream sm:text-xs; }
+  .announcement span { @apply mx-2 text-sage-light; }
+  .nav-link { @apply transition-colors duration-200 hover:text-sage; }
+  .icon-button { @apply relative inline-flex h-10 w-10 items-center justify-center rounded-xl transition-colors duration-200 hover:bg-sage/10; }
+  .cart-count { @apply absolute right-0 top-0 grid h-4 min-w-4 place-items-center rounded-full bg-sage px-1 text-[9px] font-bold text-cream; }
+  .eyebrow { @apply flex items-center gap-2 text-[10px] font-bold uppercase tracking-[0.18em] text-sage sm:text-xs; }
+  .button-primary { @apply inline-flex items-center gap-3 rounded-xl bg-sage px-5 py-3.5 text-sm font-semibold text-cream transition-all duration-200 hover:bg-sage-dark hover:shadow-lg hover:shadow-sage/15 active:scale-[0.98]; }
+  .text-link { @apply inline-flex items-center gap-2 text-sm font-semibold text-sage transition-all hover:gap-3; }
+  .hero-section { @apply relative mt-6 min-h-[600px] overflow-hidden rounded-2xl bg-sage-light/50 sm:mt-8 lg:min-h-[650px]; }
+  .hero-photo { @apply absolute inset-y-0 right-0 w-full bg-cover bg-center opacity-45 mix-blend-multiply sm:w-[61%] sm:opacity-80; }
+  .hero-section::after { content: ''; @apply absolute inset-0 bg-gradient-to-r from-sage-light via-sage-light/90 to-transparent sm:w-3/4; }
+  .hero-stamp { @apply absolute bottom-7 right-7 z-10 flex h-24 w-24 rotate-12 flex-col items-center justify-center rounded-full border border-sage/35 text-center text-sage sm:bottom-12 sm:right-12; }
+  .hero-stamp span { @apply text-[8px] font-bold tracking-[0.2em]; }
+  .hero-stamp strong { @apply font-display text-xl; }
+  .hero-stamp small { @apply mt-0.5 text-[6px] font-bold tracking-[0.14em]; }
+  .section-space { @apply py-16 sm:py-24; }
+  .section-heading { @apply mb-8 flex items-end justify-between gap-4; }
+  .section-heading h2 { @apply mt-2 font-display text-3xl tracking-[-0.04em] sm:text-4xl; }
+  .category-card { @apply relative overflow-hidden rounded-2xl bg-white transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:shadow-sage/10; }
+  .category-image { @apply aspect-[1.05] w-full bg-cover bg-center grayscale-[.15] transition-transform duration-500 group-hover:scale-105; }
+  .category-card h3 { @apply text-sm font-semibold sm:text-base; }
+  .category-card p { @apply mt-1 text-xs text-muted; }
+  .category-arrow { @apply absolute bottom-4 right-4 text-sage opacity-0 transition-opacity group-hover:opacity-100 sm:bottom-5 sm:right-5; }
+  .product-card { @apply min-w-0; }
+  .product-image-wrap { @apply relative aspect-[0.88] overflow-hidden rounded-2xl bg-sand; }
+  .product-image { @apply h-full w-full object-cover transition duration-500 group-hover:scale-105; }
+  .product-image-wrap::after { content: ''; @apply pointer-events-none absolute inset-0 bg-gradient-to-t from-ink/30 via-transparent to-transparent opacity-0 transition-opacity group-hover:opacity-100; }
+  .product-badge { @apply absolute left-3 top-3 z-10 rounded-full bg-cream px-3 py-1.5 text-[10px] font-bold uppercase tracking-[0.12em] text-sage; }
+  .quick-add { @apply absolute bottom-3 left-3 right-3 z-10 flex translate-y-3 items-center justify-center gap-2 rounded-xl bg-cream py-3 text-xs font-semibold text-sage opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100; }
+  .story-section { @apply grid overflow-hidden rounded-2xl bg-sand md:grid-cols-2; }
+  .story-image { @apply min-h-[320px] bg-cover bg-center md:min-h-full; }
+  .perks-section { @apply grid grid-cols-1 divide-y divide-sage/10 rounded-2xl border border-sage/10 bg-white/70 py-2 sm:grid-cols-3 sm:divide-x sm:divide-y-0; }
+  .perks-section > div { @apply flex items-center gap-4 px-6 py-5 sm:flex-col sm:items-start sm:gap-2 lg:px-10; }
+  .perks-section svg { @apply text-sage; }
+  .perks-section strong { @apply text-sm; }
+  .perks-section span { @apply text-xs text-muted; }
+  .newsletter-section { @apply mx-auto max-w-3xl px-4 py-24 text-center; }
+  .newsletter-section h2 { @apply mt-4 font-display text-4xl tracking-[-0.05em] sm:text-5xl; }
+  .newsletter-section > p { @apply mx-auto mt-4 max-w-md text-sm leading-6 text-muted; }
+  .newsletter-input { @apply rounded-xl border border-sage/15 bg-white px-4 py-3.5 text-sm outline-none transition focus:border-sage focus:ring-2 focus:ring-sage/10; }
+  .success-message { @apply mx-auto mt-8 flex max-w-md items-center justify-center gap-2 rounded-xl bg-sage/10 px-4 py-3.5 text-sm font-medium text-sage; }
+  .cart-drawer { @apply absolute right-0 top-0 flex h-full w-full max-w-md flex-col bg-cream p-6 shadow-2xl sm:p-8; animation: slide-in .25s ease-out; }
+  .toast { @apply fixed bottom-5 left-1/2 z-[60] flex -translate-x-1/2 items-center gap-2 rounded-xl bg-sage px-4 py-3 text-xs font-semibold text-cream shadow-xl; animation: toast-in .25s ease-out; }
+}
+
+@keyframes slide-in { from { transform: translateX(100%); } to { transform: translateX(0); } }
+@keyframes toast-in { from { opacity: 0; transform: translate(-50%, 10px); } to { opacity: 1; transform: translate(-50%, 0); } }
