@@ -1,0 +1,297 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>StudySpace - Product Listing</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "surface-bright": "#fcf9f2",
+                        "on-tertiary-fixed-variant": "#474747",
+                        "on-error-container": "#93000a",
+                        "primary": "#49654d",
+                        "on-surface": "#1c1c18",
+                        "surface-tint": "#49654d",
+                        "surface-container-lowest": "#ffffff",
+                        "outline-variant": "#c2c8c0",
+                        "surface-variant": "#e5e2db",
+                        "inverse-primary": "#afcfb1",
+                        "inverse-surface": "#31312c",
+                        "surface-container": "#f1eee7",
+                        "on-background": "#1c1c18",
+                        "on-primary-fixed-variant": "#314d36",
+                        "surface-container-high": "#ebe8e1",
+                        "on-secondary-fixed": "#1d1b16",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#05210e",
+                        "secondary": "#615e57",
+                        "on-secondary-fixed-variant": "#494640",
+                        "on-tertiary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "tertiary": "#5f5e5e",
+                        "surface": "#fcf9f2",
+                        "secondary-fixed": "#e7e2d9",
+                        "background": "#fcf9f2",
+                        "outline": "#737971",
+                        "secondary-container": "#e7e2d9",
+                        "surface-dim": "#dcdad3",
+                        "tertiary-fixed-dim": "#c8c6c6",
+                        "on-secondary-container": "#67645d",
+                        "on-primary-container": "#435f47",
+                        "inverse-on-surface": "#f3f0e9",
+                        "tertiary-fixed": "#e4e2e1",
+                        "primary-fixed": "#caebcc",
+                        "on-tertiary-container": "#595858",
+                        "primary-container": "#b8d8ba",
+                        "surface-container-low": "#f6f3ec",
+                        "on-surface-variant": "#424842",
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#afcfb1",
+                        "on-tertiary-fixed": "#1b1c1c",
+                        "surface-container-highest": "#e5e2db",
+                        "tertiary-container": "#d1cfcf",
+                        "on-error": "#ffffff",
+                        "secondary-fixed-dim": "#cbc6bd",
+                        "on-primary": "#ffffff"
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    spacing: {
+                        "gutter": "24px",
+                        "section-gap": "80px",
+                        "base": "8px",
+                        "margin-desktop": "40px",
+                        "margin-mobile": "16px",
+                        "container-max": "1280px"
+                    },
+                    fontFamily: {
+                        "body-md": ["Inter"],
+                        "label-sm": ["Inter"],
+                        "headline-md": ["Inter"],
+                        "body-lg": ["Inter"],
+                        "display": ["Inter"],
+                        "headline-lg-mobile": ["Inter"],
+                        "label-md": ["Inter"],
+                        "headline-lg": ["Inter"]
+                    },
+                    fontSize: {
+                        "body-md": ["16px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "label-sm": ["12px", { lineHeight: "1.2", fontWeight: "600" }],
+                        "headline-md": ["24px", { lineHeight: "1.4", fontWeight: "500" }],
+                        "body-lg": ["18px", { lineHeight: "1.6", fontWeight: "400" }],
+                        "display": ["48px", { lineHeight: "1.2", letterSpacing: "-0.02em", fontWeight: "600" }],
+                        "headline-lg-mobile": ["24px", { lineHeight: "1.3", fontWeight: "600" }],
+                        "label-md": ["14px", { lineHeight: "1.2", letterSpacing: "0.01em", fontWeight: "500" }],
+                        "headline-lg": ["32px", { lineHeight: "1.3", letterSpacing: "-0.01em", fontWeight: "600" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .material-symbols-outlined[data-weight="fill"] {
+            font-variation-settings: 'FILL' 1;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface font-body-md antialiased min-h-screen flex flex-col">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-inverse-surface flex justify-between items-center px-gutter w-full max-w-container-max mx-auto h-16 border-b border-outline-variant/10 dark:border-outline/10 sticky top-0 z-50">
+<div class="flex items-center">
+<a class="text-headline-md font-headline-md font-bold text-primary dark:text-inverse-primary" href="#">StudySpace</a>
+
+</div><nav class="hidden md:flex gap-6"><a class="text-on-surface-variant dark:text-surface-variant font-body-md text-body-md hover:bg-surface-container-high transition-colors duration-200 px-3 py-2 rounded-md" href="#">Home</a><a class="text-primary dark:text-inverse-primary font-bold text-body-md border-b-2 border-primary px-3 py-2 transition-colors duration-200" href="#">Shop</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-body-md text-body-md hover:bg-surface-container-high transition-colors duration-200 px-3 py-2 rounded-md" href="#">Search</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-body-md text-body-md hover:bg-surface-container-high transition-colors duration-200 px-3 py-2 rounded-md" href="#">Cart</a>
+<a class="text-on-surface-variant dark:text-surface-variant font-body-md text-body-md hover:bg-surface-container-high transition-colors duration-200 px-3 py-2 rounded-md" href="#">Profile</a>
+</nav>
+<div class="flex items-center gap-4 justify-end">
+<button class="p-2 text-primary dark:text-inverse-primary hover:bg-surface-container-high transition-colors duration-200 rounded-full cursor-pointer active:opacity-80">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+</div>
+</header>
+<main class="flex-grow flex flex-col md:flex-row w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-8 gap-8">
+<!-- SideNavBar -->
+<aside class="hidden md:block w-64 flex-shrink-0">
+<div class="h-full w-64 rounded-r-xl bg-surface-container-low dark:bg-inverse-surface flex flex-col gap-4 p-6 overflow-y-auto sticky top-24">
+<div class="mb-4">
+<h2 class="text-headline-md font-headline-md text-primary font-bold">Filters</h2>
+<p class="text-on-surface-variant font-body-md text-sm mt-1">Refine your workspace</p>
+</div>
+<nav class="flex flex-col gap-2">
+<a class="bg-primary-container text-on-primary-container rounded-lg font-bold font-label-md text-label-md px-4 py-3 flex items-center gap-3 hover:bg-primary-container/20 transition-all active:scale-95 duration-100" href="#">
+<span class="material-symbols-outlined" data-icon="grid_view">grid_view</span>
+                        All Products
+                    </a>
+<a class="text-on-surface-variant hover:bg-surface-variant/50 rounded-lg font-label-md text-label-md px-4 py-3 flex items-center gap-3 transition-all active:scale-95 duration-100" href="#">
+<span class="material-symbols-outlined" data-icon="desk">desk</span>
+                        Desks
+                    </a>
+<a class="text-on-surface-variant hover:bg-surface-variant/50 rounded-lg font-label-md text-label-md px-4 py-3 flex items-center gap-3 transition-all active:scale-95 duration-100" href="#">
+<span class="material-symbols-outlined" data-icon="lightbulb">lightbulb</span>
+                        Lighting
+                    </a>
+<a class="text-on-surface-variant hover:bg-surface-variant/50 rounded-lg font-label-md text-label-md px-4 py-3 flex items-center gap-3 transition-all active:scale-95 duration-100" href="#">
+<span class="material-symbols-outlined" data-icon="edit">edit</span>
+                        Stationery
+                    </a>
+<a class="text-on-surface-variant hover:bg-surface-variant/50 rounded-lg font-label-md text-label-md px-4 py-3 flex items-center gap-3 transition-all active:scale-95 duration-100" href="#">
+<span class="material-symbols-outlined" data-icon="inventory_2">inventory_2</span>
+                        Organizers
+                    </a>
+</nav>
+<div class="mt-6 pt-6 border-t border-outline-variant/20">
+<h3 class="font-label-md text-label-md font-bold mb-4 text-on-surface">Price Range</h3>
+<input class="w-full accent-primary" max="100" min="0" type="range" value="50">
+<div class="flex justify-between text-sm mt-2 text-on-surface-variant">
+<span class="">$0</span>
+<span class="">$100+</span>
+</div>
+</div>
+<div class="mt-6 pt-6 border-t border-outline-variant/20">
+<h3 class="font-label-md text-label-md font-bold mb-4 text-on-surface">Rating</h3>
+<div class="flex flex-col gap-2">
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="form-checkbox text-primary rounded border-outline-variant focus:ring-primary" type="checkbox">
+<span class="flex items-center text-sm text-on-surface-variant"><span class="material-symbols-outlined text-primary text-sm mr-1" data-weight="fill">star</span> 4 &amp; Up</span>
+</label>
+</div>
+</div>
+<button class="mt-8 w-full py-2 px-4 border border-outline rounded-lg text-on-surface hover:bg-surface-container-high transition-colors text-sm font-medium">
+                    Clear All
+                </button>
+</div>
+</aside>
+<!-- Main Content -->
+<div class="flex-grow flex flex-col gap-6">
+<!-- Toolbar -->
+<div class="flex justify-between items-center pb-4 border-b border-outline-variant/10">
+<p class="text-on-surface-variant font-body-md text-sm">Showing 12 results</p>
+<div class="flex items-center gap-2">
+<span class="text-sm text-on-surface-variant">Sort By:</span>
+<select class="form-select bg-surface border-outline-variant/30 rounded-lg text-sm py-1 pl-3 pr-8 focus:ring-primary focus:border-primary cursor-pointer">
+<option>Popularity</option>
+<option>Price: Low to High</option>
+<option>Price: High to Low</option>
+</select>
+</div>
+</div>
+<!-- Product Grid -->
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+<!-- Product 1 -->
+<div class="group flex flex-col bg-surface-container-lowest rounded-xl border border-outline-variant/10 overflow-hidden hover:shadow-[0_4px_20px_rgba(51,51,51,0.05)] transition-all duration-300">
+<div class="relative aspect-[4/5] bg-[#F4F1EA] p-4 flex items-center justify-center">
+<span class="absolute top-3 left-3 bg-primary-container text-on-primary-container font-label-sm text-label-sm px-2 py-1 rounded">Best Seller</span>
+<img class="object-cover w-full h-full rounded-lg mix-blend-multiply" data-alt="A meticulously arranged linen notebook set in soft cream and sage green tones, resting on a clean wooden desk surface. Soft, diffused natural light highlights the textured fabric cover. High key lighting, minimalist aesthetic, calm and organized workspace setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4N6YWp2I2SdrVdYZ5GRywKiUL3qLBl2AJrRR79kO1V2JYGksQsRjx27ZtvW6TN1c1gcG3B0L76ajsHq3YxdL_gOG5S5cEvQ4ZPetjmpN369MZMBYLGezyVizl6EAjb4-RsnDMOk3apH38zh0785iBLnzt8XeJEx5_uDPkoD0XkmRYlyZIlouATIV50viS2oraiMxkIbpAePWEF8LPAJ75A7f9qSyKcbAKTqs-IHdq9MU_-_3pR99UCg">
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-body-md text-body-md font-medium text-on-surface leading-tight">Linen Notebook Set</h3>
+<span class="font-label-md text-label-md font-semibold text-primary">$32.00</span>
+</div>
+<div class="flex items-center gap-1 mb-4">
+<span class="material-symbols-outlined text-[16px] text-primary" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-[16px] text-primary" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-[16px] text-primary" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-[16px] text-primary" data-weight="fill">star</span>
+<span class="material-symbols-outlined text-[16px] text-primary" data-weight="fill">star</span>
+</div>
+<button class="mt-auto w-full py-2 bg-on-surface text-surface-bright rounded-lg font-label-md text-sm hover:bg-primary transition-colors opacity-0 group-hover:opacity-100 focus:opacity-100">Quick Add</button>
+</div>
+</div>
+<!-- Product 2 -->
+<div class="group flex flex-col bg-surface-container-lowest rounded-xl border border-outline-variant/10 overflow-hidden hover:shadow-[0_4px_20px_rgba(51,51,51,0.05)] transition-all duration-300">
+<div class="relative aspect-[4/5] bg-[#F4F1EA] p-4 flex items-center justify-center">
+<img class="object-cover w-full h-full rounded-lg mix-blend-multiply" data-alt="A wide, soft dark grey felt desk pad laying flat on a bright white table. A single white modern mouse sits on it. Soft top-down lighting emphasizes the felt texture against the smooth desk. Minimalist, clean, light-mode design environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDetMSdO4G9ACDxNcXJG-GnkWMZZzkrQ-ipfKBjZMAhDQfcV_DEptlRBViP7N0yuaGhNQkHyatufyvJrE29TorWaRrDg3yZcRt-89icNknTziAO9kVbHh2asc7Z_1RWMGfY_ydfiFSI8D0OnGogajmEtxrdV0X9haHYqtdGxmKSwTKg6oVseMVXOhUXDXZkAEVa1sZiJLOAGTzEK_6LAk3NqbJZpPjkNhjFqhulR7V_6BafheGCATFkvQ">
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-body-md text-body-md font-medium text-on-surface leading-tight">Felt Desk Pad</h3>
+<span class="font-label-md text-label-md font-semibold text-primary">$28.00</span>
+</div>
+<div class="flex items-center gap-1 mb-4 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-[16px] text-primary" data-weight="fill">star</span>
+<span class="ml-1">4.5</span>
+</div>
+<button class="mt-auto w-full py-2 bg-on-surface text-surface-bright rounded-lg font-label-md text-sm hover:bg-primary transition-colors opacity-0 group-hover:opacity-100 focus:opacity-100">Quick Add</button>
+</div>
+</div>
+<!-- Product 3 -->
+<div class="group flex flex-col bg-surface-container-lowest rounded-xl border border-outline-variant/10 overflow-hidden hover:shadow-[0_4px_20px_rgba(51,51,51,0.05)] transition-all duration-300">
+<div class="relative aspect-[4/5] bg-[#F4F1EA] p-4 flex items-center justify-center">
+<img class="object-cover w-full h-full rounded-lg mix-blend-multiply" data-alt="A 6-pack of sleek, matte pastel-colored ergonomic gel pens arranged neatly in a row on a stark white background. The lighting is soft and even, casting almost invisible shadows. The aesthetic is clean, modern, and perfectly organized, conveying a sense of calm productivity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDyhFWLvuFsUyhc_A4xs_QEwMHYc1xqJ5okcbiJX2yADrKpOePEzgXiRMRS3JSFvliggTjyTSfK9-qxNAG6cos1-ThrWokgO6zGnqhY_AgyDyNBjhfQfM935s_gDCaCBe8C96J4JcH7LT5nn9XEieJzOjLiRrZXlQOEMr-3hty-7C9knjA7rbCQnwVBqhR8DBVJ_KPgc-cwadsrg1sSxsMvgZeFDHtfXTPZlwc6TxygK_gon8H_yhRpRw">
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-body-md text-body-md font-medium text-on-surface leading-tight">Ergonomic Gel Pens (6-pack)</h3>
+<span class="font-label-md text-label-md font-semibold text-primary">$18.00</span>
+</div>
+<div class="flex items-center gap-1 mb-4 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-[16px] text-primary" data-weight="fill">star</span>
+<span class="ml-1">4.8</span>
+</div>
+<button class="mt-auto w-full py-2 bg-on-surface text-surface-bright rounded-lg font-label-md text-sm hover:bg-primary transition-colors opacity-0 group-hover:opacity-100 focus:opacity-100">Quick Add</button>
+</div>
+</div>
+<!-- Product 4 -->
+<div class="group flex flex-col bg-surface-container-lowest rounded-xl border border-outline-variant/10 overflow-hidden hover:shadow-[0_4px_20px_rgba(51,51,51,0.05)] transition-all duration-300">
+<div class="relative aspect-[4/5] bg-[#F4F1EA] p-4 flex items-center justify-center">
+<img class="object-cover w-full h-full rounded-lg mix-blend-multiply" data-alt="A minimalist cylindrical ceramic pen pot in a matte off-white finish, holding a few wooden pencils. It sits on a light ash wood surface. The scene is brightly lit with a serene, airy feel, perfectly matching a calm, focused study environment." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDB9__Xx9PgKhw-oG7w7KtFD-ERfUsdd3DU_EJJMcpKYtP1laFBSRGApvTyXvXDNqy5YLgCQbMMhw1WFohg_EurwAdMPB-qIOC5oHUej5WL63GKNr7-GWBuaoDXd4E0JXCqrIdJfumkoe-pWVf1XfCLfJWx7adlxp9kZTf9VHKx-BLik5NGFCBI-64InzGF9wQb6_VSyhJERc_2Jd7gsnPwe8X0EaVy3qoBWB-xPf_O-fGv6qe5peIZ8w">
+</div>
+<div class="p-4 flex flex-col flex-grow">
+<div class="flex justify-between items-start mb-2">
+<h3 class="font-body-md text-body-md font-medium text-on-surface leading-tight">Minimalist Pen Pot</h3>
+<span class="font-label-md text-label-md font-semibold text-primary">$15.00</span>
+</div>
+<div class="flex items-center gap-1 mb-4 text-on-surface-variant text-sm">
+<span class="material-symbols-outlined text-[16px] text-primary" data-weight="fill">star</span>
+<span class="ml-1">4.2</span>
+</div>
+<button class="mt-auto w-full py-2 bg-on-surface text-surface-bright rounded-lg font-label-md text-sm hover:bg-primary transition-colors opacity-0 group-hover:opacity-100 focus:opacity-100">Quick Add</button>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-2 border-t border-outline-variant/10 bg-surface/95 backdrop-blur-md shadow-sm rounded-t-xl">
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-2xl px-4 py-1 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="storefront">storefront</span>
+<span class="font-label-sm text-label-sm mt-1">Shop</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-highest transition-all active:scale-90 px-4 py-1 rounded-2xl" href="#">
+<span class="material-symbols-outlined" data-icon="search">search</span>
+<span class="font-label-sm text-label-sm mt-1">Search</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-highest transition-all active:scale-90 px-4 py-1 rounded-2xl" href="#">
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+<span class="font-label-sm text-label-sm mt-1">Cart</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-highest transition-all active:scale-90 px-4 py-1 rounded-2xl" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-label-sm text-label-sm mt-1">Profile</span>
+</a>
+</nav>
+
+
+
+
+
+
+
+
+</body></html>

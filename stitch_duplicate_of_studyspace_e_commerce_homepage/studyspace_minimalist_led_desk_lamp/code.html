@@ -1,0 +1,340 @@
+<!DOCTYPE html><html class="light" lang="en" style=""><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>StudySpace - Minimalist LED Desk Lamp</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-bright": "#fcf9f2",
+                    "background": "#fcf9f2",
+                    "error-container": "#ffdad6",
+                    "secondary-fixed-dim": "#cbc6bd",
+                    "on-primary": "#ffffff",
+                    "surface-variant": "#e5e2db",
+                    "on-background": "#1c1c18",
+                    "inverse-primary": "#afcfb1",
+                    "on-secondary-fixed-variant": "#494640",
+                    "on-surface-variant": "#424842",
+                    "outline": "#737971",
+                    "surface-container-highest": "#e5e2db",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-container": "#435f47",
+                    "surface-dim": "#dcdad3",
+                    "primary-fixed-dim": "#afcfb1",
+                    "outline-variant": "#c2c8c0",
+                    "on-error-container": "#93000a",
+                    "primary-fixed": "#caebcc",
+                    "surface-container-high": "#ebe8e1",
+                    "secondary-container": "#e7e2d9",
+                    "surface-container": "#f1eee7",
+                    "tertiary-fixed": "#e4e2e1",
+                    "secondary": "#615e57",
+                    "on-tertiary-container": "#595858",
+                    "primary-container": "#b8d8ba",
+                    "surface-tint": "#49654d",
+                    "tertiary": "#5f5e5e",
+                    "on-tertiary-fixed": "#1b1c1c",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed-variant": "#314d36",
+                    "inverse-surface": "#31312c",
+                    "surface-container-low": "#f6f3ec",
+                    "on-error": "#ffffff",
+                    "inverse-on-surface": "#f3f0e9",
+                    "on-secondary-fixed": "#1d1b16",
+                    "surface-container-lowest": "#ffffff",
+                    "on-surface": "#1c1c18",
+                    "primary": "#49654d",
+                    "tertiary-fixed-dim": "#c8c6c6",
+                    "error": "#ba1a1a",
+                    "on-secondary-container": "#67645d",
+                    "surface": "#fcf9f2",
+                    "secondary-fixed": "#e7e2d9",
+                    "on-primary-fixed": "#05210e",
+                    "on-tertiary-fixed-variant": "#474747",
+                    "tertiary-container": "#d1cfcf"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "base": "8px",
+                    "margin-mobile": "16px",
+                    "margin-desktop": "40px",
+                    "container-max": "1280px",
+                    "section-gap": "80px",
+                    "gutter": "24px"
+            },
+            "fontFamily": {
+                    "display": [
+                            "Inter"
+                    ],
+                    "body-lg": [
+                            "Inter"
+                    ],
+                    "body-md": [
+                            "Inter"
+                    ],
+                    "headline-lg": [
+                            "Inter"
+                    ],
+                    "headline-md": [
+                            "Inter"
+                    ],
+                    "headline-lg-mobile": [
+                            "Inter"
+                    ],
+                    "label-md": [
+                            "Inter"
+                    ],
+                    "label-sm": [
+                            "Inter"
+                    ]
+            },
+            "fontSize": {
+                    "display": [
+                            "48px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "-0.02em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "body-lg": [
+                            "18px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "body-md": [
+                            "16px",
+                            {
+                                    "lineHeight": "1.6",
+                                    "fontWeight": "400"
+                            }
+                    ],
+                    "headline-lg": [
+                            "32px",
+                            {
+                                    "lineHeight": "1.3",
+                                    "letterSpacing": "-0.01em",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "headline-md": [
+                            "24px",
+                            {
+                                    "lineHeight": "1.4",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "headline-lg-mobile": [
+                            "24px",
+                            {
+                                    "lineHeight": "1.3",
+                                    "fontWeight": "600"
+                            }
+                    ],
+                    "label-md": [
+                            "14px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "letterSpacing": "0.01em",
+                                    "fontWeight": "500"
+                            }
+                    ],
+                    "label-sm": [
+                            "12px",
+                            {
+                                    "lineHeight": "1.2",
+                                    "fontWeight": "600"
+                            }
+                    ]
+            }
+        },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .filled-icon {
+             font-variation-settings: 'FILL' 1, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen flex flex-col antialiased">
+<!-- TopNavBar -->
+<header class="bg-surface dark:bg-inverse-surface flex justify-between items-center px-gutter w-full max-w-container-max mx-auto h-16 border-b border-outline-variant/10 dark:border-outline/10 sticky top-0 z-50">
+<a class="text-headline-md font-headline-md font-bold text-primary dark:text-inverse-primary" href="#">StudySpace</a><nav class="hidden md:flex flex-1 justify-center gap-6"><a class="text-on-surface-variant dark:text-surface-variant font-body-md text-body-md hover:bg-surface-container-high transition-colors duration-200 px-3 py-2 rounded-md" href="#">Home</a><a class="dark:text-surface-variant font-body-md text-body-md hover:bg-surface-container-high transition-colors duration-200 px-3 py-2 rounded-md text-primary font-bold border-b-2 border-primary rounded-none" href="#">Shop</a><a class="text-on-surface-variant dark:text-surface-variant font-body-md text-body-md hover:bg-surface-container-high transition-colors duration-200 px-3 py-2 rounded-md" href="#">Search</a><a class="text-on-surface-variant dark:text-surface-variant font-body-md text-body-md hover:bg-surface-container-high transition-colors duration-200 px-3 py-2 rounded-md" href="#">Cart</a><a class="text-on-surface-variant dark:text-surface-variant font-body-md text-body-md hover:bg-surface-container-high transition-colors duration-200 px-3 py-2 rounded-md" href="#">Profile</a></nav>
+<div class="flex items-center gap-4 justify-end">
+<button class="p-2 text-primary dark:text-inverse-primary hover:bg-surface-container-high transition-colors duration-200 rounded-full cursor-pointer active:opacity-80">
+<span class="material-symbols-outlined" data-icon="shopping_cart">shopping_cart</span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-grow w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-gap">
+<!-- Breadcrumb -->
+<nav aria-label="Breadcrumb" class="flex text-on-surface-variant font-label-sm text-label-sm mb-8">
+<ol class="inline-flex items-center space-x-1 md:space-x-2">
+<li class="inline-flex items-center">
+<a class="hover:text-primary transition-colors" href="#">Lighting</a>
+</li>
+<li class="">
+<div class="flex items-center">
+<span class="material-symbols-outlined text-[16px] mx-1">chevron_right</span>
+<span class="text-on-surface-variant ml-1 md:ml-2">Minimalist LED Desk Lamp</span>
+</div>
+</li>
+</ol>
+</nav>
+<div class="flex flex-col lg:flex-row gap-12 lg:gap-24">
+<!-- Product Images (Left Side) -->
+<div class="flex-1 flex gap-4 lg:gap-8 h-[500px] lg:h-[700px]">
+<!-- Vertical Thumbnails -->
+<div class="hidden md:flex flex-col gap-4 w-24 shrink-0 overflow-y-auto pr-2 no-scrollbar">
+<button class="w-full aspect-square rounded-lg border-2 border-primary overflow-hidden bg-surface-container-low transition-all">
+<img alt="Thumbnail 1" class="w-full h-full object-cover mix-blend-multiply" data-alt="A close-up product shot of a sleek, minimalist LED desk lamp in warm white, resting on a clean wooden desk. The light mode aesthetic is bright and airy, with soft natural light highlighting the smooth matte finish and rounded edges of the lamp. A calm, focused mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDqvh5ej6yfZlgnTHRiHJ2xyhQSL9iC7D3z947nGkxHb198Z3cPh9GIiiKNAQjE7v2AtlB4GouvtxbvHOxYxlAlEiPTKF2wdTjesjnW6pcGWrfnxZguWX1zEpc8LFFqu6tk3SiZ7mkkxAEM5tc0DcoMEnAN1B5Mw2iBxKdOhkrEeZg4RY5dkYdoVHkNEXtR9LCGJ4HZPrExWwlBULP1v2xxNqPu804vTt4Pw9kWAEbkQuAYQ-EFdZ0SHQ">
+</button>
+<button class="w-full aspect-square rounded-lg border-2 border-transparent hover:border-outline-variant overflow-hidden bg-surface-container-low transition-all">
+<img alt="Thumbnail 2" class="w-full h-full object-cover mix-blend-multiply" data-alt="A detail shot showing the adjustable head of the minimalist LED desk lamp, tilted slightly downwards. The lamp is a soft sage green color against a light cream background, emphasizing the tactile, soft-touch UI design language of StudySpace. Gentle ambient lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAPFlYdCqhGrp1-796by-6m1Mafn2L739wpkLU3zb8g8yIR9zJAKQKOc_R3VvHkV8JzPjLPTlzBtvNkPuDuiFB4NM0XktXFnlcd9YCo2fJDOP7y401tiaE3SQo7COWkMBoRXU275TR07Et-GQGhbG0UcdZzi1G-8oi7ouwxbV7v5xhOZZmBKT7pFzYyPK9xRY0XwcUhori2AYP9YsYXpNHvGBkulgw3trI2IYcywbgwlTVa8L7mA-dvsQ">
+</button>
+<button class="w-full aspect-square rounded-lg border-2 border-transparent hover:border-outline-variant overflow-hidden bg-surface-container-low transition-all">
+<img alt="Thumbnail 3" class="w-full h-full object-cover mix-blend-multiply" data-alt="A lifestyle image showing the minimalist LED desk lamp illuminating a neat workspace with a notebook, pen, and a small potted plant. The overall aesthetic is 'Calm Commerce' - serene, organized, and breathable, with ample whitespace and soft tonal shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaACNTqLhJbw9lx0_PCcTlBP6qzUhxDuVRFcFL7zp_VQCbm0Avij_XMhqt6uOhMXxXe3YOm-UW7mRdLFs_5QqrYYRtNpwpX0mlPs4r3hW7DODWzi0uL2z9ZvgpE89gvkOFrlv4MgomLosftt7NgBE2FL4iFttTmKRu2MxGsQVXW-A0R5D33V4OJ1eSyMhwZvvYnrXao3iTgj8lv8vNOK7GfEpefEBDbNUUBNv9KIGibA1r8YIL1cuwMg">
+</button>
+<button class="w-full aspect-square rounded-lg border-2 border-transparent hover:border-outline-variant overflow-hidden bg-surface-container-low transition-all flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-3xl">play_circle</span>
+</button>
+</div>
+<!-- Main Image -->
+<div class="flex-1 bg-surface-container-low rounded-xl border border-outline-variant/10 overflow-hidden relative group cursor-crosshair">
+<img alt="Main Product Image" class="w-full h-full object-cover mix-blend-multiply transition-transform duration-500 group-hover:scale-105" data-alt="A large, high-quality hero image of a minimalist LED desk lamp in a 'Sand' color, standing tall on a pristine white surface. The background is a soft, breathable cream color, adhering to a light airy aesthetic. The lighting is perfectly balanced to show the matte texture and clean lines without harsh shadows." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDO0X-gVLjCqbFS_fFQq22675KS43NzFTTgTsQOoFZgD0zqTg4z5C1RYWvx1h2AfeJRC2nvLTY8B8Amrs8pklyxU6SQ0REhgYRw4gpPuZpI9H6NEdEOIWC7GbfstY2CESOUOOUqeDTJF22UphXlzW8zEWcW2uVAWrj88fqMJg11-quf9xvmFRdDdqnwttjuDL0iqww0BCAykeIXJwQCZkJPTOMdSHVoA8BhgdU7ZdqXR37cj7PngsZzuw">
+<button class="absolute top-4 right-4 p-3 bg-surface/80 backdrop-blur-md rounded-full shadow-sm text-on-surface hover:text-primary hover:bg-surface transition-all">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+</div>
+<!-- Product Details (Right Side) -->
+<div class="flex-1 flex flex-col max-w-xl">
+<div class="flex items-center gap-2 mb-4">
+<span class="bg-primary-container text-on-primary-container px-3 py-1 rounded-full font-label-sm text-label-sm uppercase tracking-wider">Bestseller</span>
+<span class="text-primary flex items-center gap-1 font-label-sm text-label-sm"><span class="material-symbols-outlined filled-icon text-[14px]">eco</span> Eco-Friendly</span>
+</div>
+<h1 class="font-display text-display text-on-surface mb-2">Minimalist LED Desk Lamp</h1>
+<div class="flex items-center gap-4 mb-6">
+<div class="flex text-[#F59E0B] items-center">
+<span class="material-symbols-outlined filled-icon text-[20px]">star</span>
+<span class="material-symbols-outlined filled-icon text-[20px]">star</span>
+<span class="material-symbols-outlined filled-icon text-[20px]">star</span>
+<span class="material-symbols-outlined filled-icon text-[20px]">star</span>
+<span class="material-symbols-outlined text-[20px]">star_half</span>
+</div>
+<span class="font-label-md text-label-md text-on-surface-variant">4.8 (124 reviews)</span>
+</div>
+<div class="font-headline-lg text-headline-lg text-on-surface mb-8">$34.99</div>
+<!-- Color Selection -->
+<div class="mb-8">
+<h3 class="font-label-md text-label-md text-on-surface mb-3 flex items-center justify-between">
+                        Color <span class="text-on-surface-variant font-body-md text-body-md">Warm White</span>
+</h3>
+<div class="flex gap-4">
+<button aria-label="Warm White" class="w-12 h-12 rounded-full border-2 border-primary bg-[#F9F6F0] shadow-sm relative">
+<span class="absolute inset-0 rounded-full border-4 border-surface"></span>
+</button>
+<button aria-label="Sage Green" class="w-12 h-12 rounded-full border-2 border-transparent hover:border-outline-variant bg-[#A8B5A2] transition-all"></button>
+<button aria-label="Sand" class="w-12 h-12 rounded-full border-2 border-transparent hover:border-outline-variant bg-[#D3C7B6] transition-all"></button>
+</div>
+</div>
+<!-- Quantity & Actions -->
+<div class="flex flex-col sm:flex-row gap-4 mb-12">
+<div class="flex items-center border border-outline-variant/30 rounded-lg bg-surface-container-lowest overflow-hidden h-14 w-full sm:w-32 shrink-0">
+<button class="w-full h-full flex items-center justify-center text-on-surface hover:bg-surface-container-low transition-colors"><span class="material-symbols-outlined">remove</span></button>
+<span class="font-body-md text-body-md text-on-surface font-semibold px-2 text-center w-full">1</span>
+<button class="w-full h-full flex items-center justify-center text-on-surface hover:bg-surface-container-low transition-colors"><span class="material-symbols-outlined">add</span></button>
+</div>
+<button class="flex-1 h-14 bg-primary-container text-on-primary-container font-label-md text-label-md rounded-lg flex items-center justify-center gap-2 hover:bg-[#A5CBA8] transition-colors shadow-sm">
+<span class="material-symbols-outlined">shopping_bag</span>
+                        Add to Cart
+                    </button>
+<button class="flex-1 h-14 bg-[#333333] text-white font-label-md text-label-md rounded-lg flex items-center justify-center gap-2 hover:bg-black transition-colors shadow-sm">
+                        Buy Now
+                    </button>
+</div>
+<!-- Accordion / Tabs -->
+<div class="border-t border-outline-variant/10">
+<details class="group py-4 border-b border-outline-variant/10" open="">
+<summary class="flex justify-between items-center font-label-md text-label-md text-on-surface cursor-pointer list-none">
+                            Description
+                            <span class="material-symbols-outlined transition group-open:rotate-180">expand_more</span>
+</summary>
+<div class="font-body-md text-body-md text-on-surface-variant pt-4 pb-2 leading-relaxed">
+                            Elevate your workspace with our Minimalist LED Desk Lamp. Designed with 'Calm Commerce' in mind, it provides flicker-free, adjustable lighting to reduce eye strain during long study sessions. The soft-touch matte finish and sleek profile integrate seamlessly into any serene environment.
+                        </div>
+</details>
+<details class="group py-4 border-b border-outline-variant/10">
+<summary class="flex justify-between items-center font-label-md text-label-md text-on-surface cursor-pointer list-none">
+                            Specifications
+                            <span class="material-symbols-outlined transition group-open:rotate-180">expand_more</span>
+</summary>
+<div class="font-body-md text-body-md text-on-surface-variant pt-4 pb-2">
+<ul class="space-y-2">
+<li class="flex justify-between"><span class="text-on-surface">Material</span> <span class="">Recycled Aluminum</span></li>
+<li class="flex justify-between"><span class="text-on-surface">Dimensions</span> <span class="">15" H x 5" W</span></li>
+<li class="flex justify-between"><span class="text-on-surface">Power</span> <span class="">USB-C Rechargeable</span></li>
+</ul>
+</div>
+</details>
+<details class="group py-4">
+<summary class="flex justify-between items-center font-label-md text-label-md text-on-surface cursor-pointer list-none">
+                            Reviews (124)
+                            <span class="material-symbols-outlined transition group-open:rotate-180">expand_more</span>
+</summary>
+<div class="font-body-md text-body-md text-on-surface-variant pt-4 pb-2">
+                             Review content would live here in a clean, padded list format.
+                        </div>
+</details>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden bg-surface dark:bg-inverse-surface text-primary dark:text-inverse-primary border-t border-outline-variant/10 bg-surface/95 backdrop-blur-md shadow-sm docked full-width bottom-0 rounded-t-xl fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-2">
+<a class="flex flex-col items-center justify-center bg-primary-container text-on-primary-container rounded-2xl px-4 py-1 hover:bg-surface-container-highest transition-all active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined filled-icon">storefront</span>
+<span class="font-label-sm text-label-sm-mobile">Shop</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-highest transition-all active:scale-90 transition-transform px-4 py-1 rounded-2xl" href="#">
+<span class="material-symbols-outlined">search</span>
+<span class="font-label-sm text-label-sm-mobile">Search</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-highest transition-all active:scale-90 transition-transform px-4 py-1 rounded-2xl relative" href="#">
+<span class="material-symbols-outlined">shopping_bag</span>
+<span class="absolute top-1 right-3 w-2 h-2 bg-[#ba1a1a] rounded-full"></span>
+<span class="font-label-sm text-label-sm-mobile">Cart</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:bg-surface-container-highest transition-all active:scale-90 transition-transform px-4 py-1 rounded-2xl" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-label-sm text-label-sm-mobile">Profile</span>
+</a>
+</nav>
+
+
+
+
+
+
+
+
+</body></html>

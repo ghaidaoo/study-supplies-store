@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>StudySpace — Curated Stationery &amp; Desk Essentials</title>
+<!-- Tailwind CSS CDN with Forms & Container Queries plugins -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Custom Configuration -->
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            brand: {
+              cream: '#fcf9f2',
+              card: '#f4ede2',
+              cardLight: '#f8f4ec',
+              sage: '#405844',
+              sageHover: '#334737',
+              sagePill: '#b6cca8',
+              sagePillHover: '#a3ba95',
+              dark: '#212521',
+              charcoal: '#373d37',
+              border: '#eae3d5',
+              accentGreen: '#3b6e4c'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            serif: ['Georgia', 'Cambria', 'serif']
+          }
+        }
+      }
+    }
+  </script>
+<!-- Custom Styles for Typography and Global Settings -->
+<style data-purpose="custom-styling">
+    body {
+      background-color: #fcf9f2;
+      color: #212521;
+      -webkit-font-smoothing: antialiased;
+    }
+  </style>
+</head>
+<body class="min-h-screen bg-brand-cream text-brand-dark flex flex-col antialiased selection:bg-brand-sagePill selection:text-brand-dark">
+<!-- BEGIN: MainHeader -->
+<header class="w-full max-w-7xl mx-auto px-6 lg:px-12 py-7 flex items-center justify-between" data-purpose="site-navigation-bar">
+<!-- Brand Logo -->
+<a class="text-2xl font-bold tracking-tight text-brand-sage hover:opacity-90 transition-opacity" href="#">
+      StudySpace
+    </a>
+<!-- Primary Navigation Links -->
+<nav class="hidden sm:flex items-center space-x-8 text-sm font-normal text-brand-charcoal" data-purpose="primary-menu">
+<a class="hover:text-brand-dark transition-colors" href="#">Shop</a>
+<a class="hover:text-brand-dark transition-colors" href="#">Search</a>
+<a class="hover:text-brand-dark transition-colors" href="#">Cart</a>
+<a class="hover:text-brand-dark transition-colors" href="#">Profile</a>
+</nav>
+<!-- Cart Action Button -->
+<div class="flex items-center space-x-4" data-purpose="header-cart-icon">
+<a aria-label="Shopping Cart" class="text-brand-dark hover:text-brand-sage transition-colors p-1" href="#">
+<svg class="w-5 h-5 stroke-current" fill="none" stroke-width="2" viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+<circle cx="9" cy="20" r="1"></circle>
+<circle cx="20" cy="20" r="1"></circle>
+<path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path>
+</svg>
+</a>
+</div>
+</header>
+<!-- END: MainHeader -->
+<!-- BEGIN: MainContent -->
+<main class="flex-grow w-full max-w-7xl mx-auto px-6 lg:px-12 space-y-24 py-6">
+<!-- BEGIN: HeroSection -->
+<section class="py-12 lg:py-16 max-w-2xl" data-purpose="hero-banner">
+<h1 class="text-5xl lg:text-6xl font-bold tracking-tight text-brand-dark leading-[1.15]">
+        Your Most<br/>
+<span class="text-brand-sage">Productive Space</span><br/>
+        Starts Here
+      </h1>
+<p class="mt-6 text-lg text-stone-600 font-normal leading-relaxed max-w-md">
+        Curated stationery and desk essentials for focused minds.
+      </p>
+<div class="mt-8">
+<a class="inline-flex items-center justify-center px-7 py-3 rounded-md bg-brand-sagePill hover:bg-brand-sagePillHover text-brand-dark font-medium text-sm transition-all shadow-sm" href="#shop">
+          Shop Now
+        </a>
+</div>
+</section>
+<!-- END: HeroSection -->
+<!-- BEGIN: CategoriesSection -->
+<section data-purpose="explore-categories">
+<h2 class="text-2xl font-bold text-brand-dark tracking-tight mb-8">
+        Explore Categories
+      </h2>
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-8 max-w-2xl">
+<!-- Category: Notebooks -->
+<a class="group flex flex-col items-start focus:outline-none" data-purpose="category-notebooks" href="#">
+<div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden bg-brand-card shadow-sm group-hover:shadow transition-shadow">
+<img alt="Notebooks" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAI1kp87ohoV90eoSZBhfsbO2LPsG2TIyw16U0p1nBIDBHgvMqkYBWWqcW8cPkE-_jJmZwN5vS45YT6DZw5gKkYuZt15sEJ9-tTNsvObny23wTnbZmnV88ETzJfKxfuwxjHM7tDH7_trunadoB-dxHinsa7DRmY_qID7ETvRzpoJeG8Dl1oHrXKQZQSVXNVL-9YiUlumfpTtFUAkQxX5GjfwOd1fAe9RXuHTbGez70"/>
+</div>
+<span class="mt-3 text-sm font-medium text-stone-800 group-hover:text-brand-sage transition-colors">Notebooks</span>
+</a>
+<!-- Category: Pens -->
+<a class="group flex flex-col items-start focus:outline-none" data-purpose="category-pens" href="#">
+<div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden bg-brand-card shadow-sm group-hover:shadow transition-shadow">
+<img alt="Pens" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCz3tbHq0c2fHvIVUNHoFQbaC0ETgt7x_8Zyiyw_shztHbvw48unVQz9S6A5UWQx_IlfHBAxEHwGzxJ8ECLJ6oIzz6AzAFN7V1nDIyM3wRxnh7e_T0DvugkYtZJ0BGoDbdm8jcIjNmctCTkdKsg8yO4zPik4CaglwNXd1LmXQaLyoWoFiDkDt1XBuvi36Aj-Fo9vKW_QK8TaU1rlqgD_9bCNt760qOQcvbuzRE2fVA"/>
+</div>
+<span class="mt-3 text-sm font-medium text-stone-800 group-hover:text-brand-sage transition-colors">Pens</span>
+</a>
+<!-- Category: Desk Organizers -->
+<a class="group flex flex-col items-start focus:outline-none" data-purpose="category-organizers" href="#">
+<div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden bg-brand-card shadow-sm group-hover:shadow transition-shadow">
+<img alt="Desk Organizers" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2txyDGZgbSscnEfBnUXMuIZc6-4HoMy54UdNMsPK9xtNXCMO8WTBVxjqDuGWIKD4ju3zwnrFuW0TVcqa0ftlz9ve-mVHvUELQbuISXt1mPGG-eIcSE7de_bURtrfbK82uctNzBVSE1D5kxagbUWlLi_nL5A2LgO76X-vCiCHZy9UfR_-RwT8X81DBktertxXbtHjNoeFDGK8jM8Aq3UmRwzBW9EGDqU9R5MBdm_s"/>
+</div>
+<span class="mt-3 text-sm font-medium text-stone-800 group-hover:text-brand-sage transition-colors">Desk Organizers</span>
+</a>
+<!-- Category: Electronics -->
+<a class="group flex flex-col items-start focus:outline-none" data-purpose="category-electronics" href="#">
+<div class="w-24 h-24 sm:w-28 sm:h-28 rounded-2xl overflow-hidden bg-brand-card shadow-sm group-hover:shadow transition-shadow">
+<img alt="Electronics" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsScunhf2BeReyeWkzcMjP1Gz89DSq5MExwpR1e5u0LPXz2Qt6DRDaT1lZUWvq9_YCUfXRQGhtDwOf_7wDOMiXekCht30qhZgHKWOcZ9MyhP2q6hGy4mm4I4n4_PK9VvLjLMXKrlT_ytpCRGmKlGQoDohucrqKc9k5egusdFi3cJu7eG-WYRJr5jk_U_QvXrcsfPZOM9sIG5fzzQ-1HDBGwxt_RKAcY4kOl94JpqM"/>
+</div>
+<span class="mt-3 text-sm font-medium text-stone-800 group-hover:text-brand-sage transition-colors">Electronics</span>
+</a>
+</div>
+</section>
+<!-- END: CategoriesSection -->
+<!-- BEGIN: FeaturedEssentialsSection -->
+<section data-purpose="featured-essentials" id="shop">
+<h2 class="text-2xl font-bold text-brand-dark tracking-tight mb-8">
+        Featured Essentials
+      </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+<!-- Product 1: Canvas Hardcover Journal -->
+<article class="flex flex-col bg-transparent group" data-purpose="featured-product-card">
+<div class="relative w-full aspect-square rounded-2xl overflow-hidden bg-stone-200 border border-stone-200/60 shadow-sm">
+<!-- Best Seller Pill -->
+<span class="absolute top-3.5 left-3.5 z-10 px-2.5 py-1 text-[11px] font-semibold tracking-wide uppercase bg-brand-sagePill/90 backdrop-blur-sm text-brand-dark rounded">
+              Best Seller
+            </span>
+<img alt="Canvas Hardcover Journal" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDKaqZMdC4gmLEFzALCPAacFvavwBrytWtoDuFi7yKkqI2jdP4Q6mP5wbNFfAuQVL9KyjXzGnHNj56-eRCjRxG1dt6T1b5yXtVs4mo-lPI1SyHJnsxwoE44oV6_2u-kOeVVCl0cjFgyFD3X8KJeMYcODOU8pjQ5TaWxWijI51FLtuxpPAJDxkw9K_YPGM3Viq6WygEGsnWr_ES0Px0PFCn63zz4O-rWbbyaUy0MEU"/>
+</div>
+<div class="mt-4 flex items-baseline justify-between">
+<h3 class="text-base font-medium text-stone-900">Canvas Hardcover Journal</h3>
+<span class="text-sm font-medium text-stone-900">$24.00</span>
+</div>
+<!-- Rating -->
+<div class="mt-1 flex items-center space-x-1 text-xs text-stone-600">
+<div class="flex text-stone-800 space-x-0.5">
+<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+</div>
+<span class="text-stone-500 pl-1">(128)</span>
+</div>
+<!-- Action Button -->
+<button class="mt-4 w-full py-2.5 px-4 text-xs font-medium rounded-lg border border-stone-300 bg-white/70 hover:bg-white text-stone-800 transition-all text-center" type="button">
+            Add to Cart
+          </button>
+</article>
+<!-- Product 2: Oak Monitor Stand -->
+<article class="flex flex-col bg-transparent group" data-purpose="featured-product-card">
+<div class="relative w-full aspect-square rounded-2xl overflow-hidden bg-stone-200 border border-stone-200/60 shadow-sm">
+<img alt="Oak Monitor Stand" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaBYof68jW33Hgwzr90yWOQI33YExeNDMhdTjj2b9YunPMYd3vViUltQM-9Yxsoi9oUQqx794_Pq5k9fLXH8_RJ10EyCiekjtyvp9s746Ogm6w1Z0rmBCCEX7I4j3A1byTwO8DHShyAhCj50qt4-J-tg_G27agzbmzcsEUzvfuLiMOTF0kOloGwRcQ2wjMMUAVN_FPFBgkLgZxZBOGjoQxv-wvBA9dwrISQIZNi7A"/>
+</div>
+<div class="mt-4 flex items-baseline justify-between">
+<h3 class="text-base font-medium text-stone-900">Oak Monitor Stand</h3>
+<span class="text-sm font-medium text-stone-900">$65.00</span>
+</div>
+<!-- Rating -->
+<div class="mt-1 flex items-center space-x-1 text-xs text-stone-600">
+<div class="flex text-stone-800 space-x-0.5">
+<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+</div>
+<span class="text-stone-500 pl-1">(84)</span>
+</div>
+<!-- Action Button -->
+<button class="mt-4 w-full py-2.5 px-4 text-xs font-medium rounded-lg border border-stone-300 bg-white/70 hover:bg-white text-stone-800 transition-all text-center" type="button">
+            Add to Cart
+          </button>
+</article>
+</div>
+</section>
+<!-- END: FeaturedEssentialsSection -->
+<!-- BEGIN: ValuePropositionBanner -->
+<section class="w-full bg-[#f4ede2] rounded-2xl px-8 py-10" data-purpose="value-propositions">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8 text-center items-center">
+<!-- Benefit 1 -->
+<div class="flex flex-col items-center justify-center space-y-2.5">
+<svg class="w-6 h-6 text-brand-sage fill-current" viewbox="0 0 24 24">
+<path d="M17 8C8 10 5.9 16.17 3.82 21.34L5.71 22l1-2.3A9.45 9.45 0 0 0 17 8zM21 3c-8.5 0-14 4.5-15 11 4.5-1 9-4.5 15-11z"></path>
+</svg>
+<span class="text-sm font-semibold text-stone-800">Eco-Friendly Materials</span>
+</div>
+<!-- Benefit 2 -->
+<div class="flex flex-col items-center justify-center space-y-2.5">
+<svg class="w-6 h-6 text-brand-sage fill-current" viewbox="0 0 24 24">
+<path d="M20 8h-3V4H3c-1.1 0-2 .9-2 2v11h2c0 1.66 1.34 3 3 3s3-1.34 3-3h6c0 1.66 1.34 3 3 3s3-1.34 3-3h2v-5l-3-4zM6 18.5c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm13.5-9l1.96 2.5H17V9.5h2.5zm-1.5 9c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"></path>
+</svg>
+<span class="text-sm font-semibold text-stone-800">Fast Delivery</span>
+</div>
+<!-- Benefit 3 -->
+<div class="flex flex-col items-center justify-center space-y-2.5">
+<svg class="w-6 h-6 text-brand-sage fill-current" viewbox="0 0 24 24">
+<path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"></path>
+</svg>
+<span class="text-sm font-semibold text-stone-800">Premium Quality Paper</span>
+</div>
+</div>
+</section>
+<!-- END: ValuePropositionBanner -->
+<!-- BEGIN: BestSellersSection -->
+<section data-purpose="best-sellers">
+<h2 class="text-2xl font-bold text-brand-dark tracking-tight mb-8">
+        Best Sellers
+      </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<!-- Best Seller 1: Brass Mechanical Pencil -->
+<article class="flex flex-col group" data-purpose="product-brass-pencil">
+<div class="relative w-full aspect-square rounded-2xl overflow-hidden bg-brand-card shadow-sm">
+<img alt="Brass Mechanical Pencil" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBc5REx9oju_Wk1jCuVz1iqHFIqB0fjk4TkFFRHHSgN-pVLj8cVlh93bigePkU6zi67h0QBOXC53TjokMal6vNUEN2w-vm9vxYaqAXCmqEl-P_iCutM4NNfdyS2X6RbOEaFjnaQS2ePc598dxc9sNPjFiLnC1_1yGGi64HgspjrkXCyJKa1n1R9RhkdrUgt0OEJ9Y6JWR3yTumgFjt_bzudHqIWwDaxlRQmq3f9R7o"/>
+</div>
+<div class="mt-4 flex items-baseline justify-between">
+<h3 class="text-base font-medium text-stone-900">Brass Mechanical Pencil</h3>
+<span class="text-sm font-medium text-stone-900">$35.00</span>
+</div>
+<!-- Rating -->
+<div class="mt-1 flex items-center space-x-1 text-xs text-stone-600">
+<div class="flex text-stone-800 space-x-0.5">
+<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+</div>
+<span class="text-stone-500 pl-1">(210)</span>
+</div>
+<!-- Quick Add Button -->
+<button class="mt-4 w-full py-3 px-4 text-xs font-semibold rounded-lg bg-brand-sage hover:bg-brand-sageHover text-white transition-colors text-center tracking-wide" type="button">
+            Quick Add
+          </button>
+</article>
+<!-- Best Seller 2: Linen Bound Planner -->
+<article class="flex flex-col group" data-purpose="product-linen-planner">
+<div class="relative w-full aspect-square rounded-2xl overflow-hidden bg-brand-card shadow-sm">
+<img alt="Linen Bound Planner" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTsNiy-07au2Z1x_H0mnMkFHUpS9DJT5SD9K7ohnFebcZKxf06JXNwE_cZy6U3F3nQNEasXcfAYVcewy2YI6uZUNTHjn8U2xVfBcX60NwonVSZsstxqo-6H5ws6En9lMJZhlV4lb2lzgHWNqjmG8E9uYLEtyVGxtxGiX0G2zevgevvcoWHHzQzhOUg07S9O4pih3nRXATINlNIqHNx-sg8-KMt-cow-77nOFwxqAg"/>
+</div>
+<div class="mt-4 flex items-baseline justify-between">
+<h3 class="text-base font-medium text-stone-900">Linen Bound Planner</h3>
+<span class="text-sm font-medium text-stone-900">$42.00</span>
+</div>
+<!-- Rating -->
+<div class="mt-1 flex items-center space-x-1 text-xs text-stone-600">
+<div class="flex text-stone-800 space-x-0.5">
+<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+</div>
+<span class="text-stone-500 pl-1">(156)</span>
+</div>
+<!-- Quick Add Button -->
+<button class="mt-4 w-full py-3 px-4 text-xs font-semibold rounded-lg bg-brand-sage hover:bg-brand-sageHover text-white transition-colors text-center tracking-wide" type="button">
+            Quick Add
+          </button>
+</article>
+</div>
+</section>
+<!-- END: BestSellersSection -->
+<!-- BEGIN: TestimonialsSection -->
+<section data-purpose="customer-reviews">
+<h2 class="text-2xl font-bold text-brand-dark tracking-tight mb-8">
+        What Our Customers Say
+      </h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- Review Card 1 -->
+<div class="bg-[#f4ede2] rounded-2xl p-8 flex flex-col justify-between" data-purpose="review-card">
+<div>
+<div class="flex text-stone-800 text-sm mb-4 space-x-0.5">
+<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+</div>
+<p class="text-stone-700 text-sm leading-relaxed">
+              "Absolutely love the quality of the notebooks. The paper is perfect for my fountain pens, no bleeding at all."
+            </p>
+</div>
+<div class="mt-6 flex items-center space-x-2 text-xs">
+<span class="font-semibold text-stone-800">Sarah J.</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium bg-brand-sagePill text-stone-800">
+<svg class="w-3 h-3 mr-1 fill-current text-brand-sage" viewbox="0 0 20 20">
+<path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path>
+</svg>
+              VERIFIED BUYER
+            </span>
+</div>
+</div>
+<!-- Review Card 2 -->
+<div class="bg-[#f4ede2] rounded-2xl p-8 flex flex-col justify-between" data-purpose="review-card">
+<div>
+<div class="flex text-stone-800 text-sm mb-4 space-x-0.5">
+<span>★</span><span>★</span><span>★</span><span>★</span><span>★</span>
+</div>
+<p class="text-stone-700 text-sm leading-relaxed">
+              "The brass mechanical pencil is a work of art. It feels substantial in the hand and makes writing a joy."
+            </p>
+</div>
+<div class="mt-6 flex items-center space-x-2 text-xs">
+<span class="font-semibold text-stone-800">Michael T.</span>
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-medium bg-brand-sagePill text-stone-800">
+<svg class="w-3 h-3 mr-1 fill-current text-brand-sage" viewbox="0 0 20 20">
+<path clip-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" fill-rule="evenodd"></path>
+</svg>
+              VERIFIED BUYER
+            </span>
+</div>
+</div>
+</div>
+</section>
+<!-- END: TestimonialsSection -->
+<!-- BEGIN: NewsletterSection -->
+<section class="max-w-3xl mx-auto w-full pt-4 pb-12" data-purpose="newsletter-subscription">
+<div class="bg-[#f4ede2] rounded-3xl p-10 md:p-14 text-center">
+<h2 class="text-2xl md:text-3xl font-bold tracking-tight text-brand-dark">
+          Join the Community
+        </h2>
+<p class="mt-2 text-stone-600 text-sm font-normal">
+          Subscribe for 10% off your first order
+        </p>
+<!-- Subscription Form -->
+<form class="mt-8 flex flex-col sm:flex-row items-center justify-center max-w-md mx-auto gap-2.5" data-purpose="newsletter-form" onsubmit="event.preventDefault();">
+<input class="w-full px-4 py-2.5 text-sm bg-white border border-stone-200 rounded-lg placeholder-stone-400 focus:outline-none focus:ring-2 focus:ring-brand-sage focus:border-brand-sage" placeholder="Enter your email" required="" type="email"/>
+<button class="w-full sm:w-auto px-6 py-2.5 text-sm font-medium rounded-lg bg-brand-sage hover:bg-brand-sageHover text-white transition-colors shrink-0" type="submit">
+            Subscribe
+          </button>
+</form>
+</div>
+</section>
+<!-- END: NewsletterSection -->
+</main>
+<!-- END: MainContent -->
+<!-- BEGIN: SiteFooter -->
+<footer class="w-full border-t border-brand-border py-12 px-6 lg:px-12 bg-brand-cream mt-auto" data-purpose="footer">
+<div class="max-w-7xl mx-auto flex flex-col md:flex-row items-start md:items-center justify-between gap-6 text-xs text-stone-500 font-normal">
+<div>
+<div class="text-lg font-bold text-brand-dark tracking-tight">StudySpace</div>
+<p class="mt-1">© 2024 StudySpace. Designed for focus.</p>
+</div>
+<!-- Footer Policy Links -->
+<nav class="flex flex-wrap items-center gap-6 text-stone-600" data-purpose="footer-links">
+<a class="hover:text-brand-dark transition-colors" href="#">Sustainability</a>
+<a class="hover:text-brand-dark transition-colors" href="#">Shipping</a>
+<a class="hover:text-brand-dark transition-colors" href="#">Returns</a>
+<a class="hover:text-brand-dark transition-colors" href="#">Contact</a>
+</nav>
+</div>
+</footer>
+<!-- END: SiteFooter -->
+</body></html>

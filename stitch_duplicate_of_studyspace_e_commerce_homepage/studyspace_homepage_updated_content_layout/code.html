@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>StudySpace — Elevate Your Study Routine</title>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-secondary-container": "#67645d",
+            "error-container": "#ffdad6",
+            "tertiary-container": "#d1cfcf",
+            "surface": "#fcf9f2",
+            "background": "#fcf9f2",
+            "on-background": "#1c1c18",
+            "secondary-container": "#e7e2d9",
+            "outline-variant": "#c2c8c0",
+            "surface-container-low": "#f6f3ec",
+            "surface-container-lowest": "#ffffff",
+            "primary-container": "#b8d8ba",
+            "on-tertiary-fixed": "#1b1c1c",
+            "on-tertiary-container": "#595858",
+            "tertiary": "#5f5e5e",
+            "primary-fixed-dim": "#afcfb1",
+            "on-error": "#ffffff",
+            "on-secondary-fixed-variant": "#494640",
+            "on-primary": "#ffffff",
+            "on-secondary": "#ffffff",
+            "on-secondary-fixed": "#1d1b16",
+            "surface-tint": "#49654d",
+            "inverse-primary": "#afcfb1",
+            "surface-container-high": "#ebe8e1",
+            "on-primary-container": "#435f47",
+            "tertiary-fixed": "#e4e2e1",
+            "tertiary-fixed-dim": "#c8c6c6",
+            "secondary": "#615e57",
+            "inverse-surface": "#31312c",
+            "on-surface-variant": "#424842",
+            "error": "#ba1a1a",
+            "secondary-fixed": "#e7e2d9",
+            "primary-fixed": "#caebcc",
+            "outline": "#737971",
+            "surface-container": "#f1eee7",
+            "on-primary-fixed-variant": "#314d36",
+            "surface-dim": "#dcdad3",
+            "surface-container-highest": "#e5e2db",
+            "surface-variant": "#e5e2db",
+            "on-primary-fixed": "#05210e",
+            "primary": "#49654d",
+            "surface-bright": "#fcf9f2",
+            "on-tertiary-fixed-variant": "#474747",
+            "secondary-fixed-dim": "#cbc6bd",
+            "on-error-container": "#93000a",
+            "inverse-on-surface": "#f3f0e9",
+            "on-surface": "#1c1c18",
+            "on-tertiary": "#ffffff"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "base": "8px",
+            "container-max": "1280px",
+            "margin-desktop": "40px",
+            "margin-mobile": "16px",
+            "gutter": "24px",
+            "section-gap": "80px"
+          },
+          "fontFamily": {
+            "headline-lg": ["Inter", "sans-serif"],
+            "label-md": ["Inter", "sans-serif"],
+            "body-md": ["Inter", "sans-serif"],
+            "body-lg": ["Inter", "sans-serif"],
+            "display": ["Inter", "sans-serif"],
+            "label-sm": ["Inter", "sans-serif"],
+            "headline-lg-mobile": ["Inter", "sans-serif"],
+            "headline-md": ["Inter", "sans-serif"]
+          },
+          "fontSize": {
+            "headline-lg": ["32px", { "lineHeight": "1.3", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "label-md": ["14px", { "lineHeight": "1.2", "letterSpacing": "0.01em", "fontWeight": "500" }],
+            "body-md": ["16px", { "lineHeight": "1.6", "fontWeight": "400" }],
+            "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+            "display": ["48px", { "lineHeight": "1.2", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "label-sm": ["12px", { "lineHeight": "1.2", "fontWeight": "600" }],
+            "headline-lg-mobile": ["24px", { "lineHeight": "1.3", "fontWeight": "600" }],
+            "headline-md": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }]
+          }
+        },
+      },
+    }
+  </script>
+</head>
+<body class="bg-background text-on-background min-h-screen selection:bg-primary-container selection:text-on-primary-container" style='font-family: Inter, "Noto Sans", sans-serif;'>
+<div class="relative flex h-auto min-h-screen w-full flex-col bg-background overflow-x-hidden">
+<!-- Top Bar Navigation -->
+<header class="sticky top-0 z-40 flex items-center bg-background/95 backdrop-blur-md px-4 sm:px-8 py-3 justify-between border-b border-surface-container-high transition-colors">
+<div class="flex items-center gap-3">
+<button aria-label="Search" class="text-on-surface flex size-10 shrink-0 items-center justify-center rounded-lg hover:bg-surface-container transition-colors" data-icon="magnifying_glass">
+<span class="material-symbols-outlined text-[24px]">qr_code_2</span>
+</button>
+<span class="text-on-surface text-xl font-bold tracking-tight">StudySpace</span>
+</div>
+<div class="flex items-center gap-2">
+<button aria-label="View shopping cart" class="flex size-10 cursor-pointer items-center justify-center rounded-lg bg-transparent text-on-surface hover:bg-surface-container transition-colors relative" data-icon="shopping_bag">
+<span class="material-symbols-outlined text-[24px]">shopping_bag</span>
+<span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-primary ring-2 ring-background"></span>
+</button>
+</div>
+</header>
+<!-- Main Content -->
+<main class="flex-1 max-w-[1280px] w-full mx-auto px-4 sm:px-8">
+<!-- Hero Section -->
+<section class="py-8 sm:py-14 @container">
+<div class="flex flex-col-reverse gap-8 items-center @[864px]:flex-row @[864px]:justify-between @[864px]:gap-12">
+<!-- Text Content on the Left -->
+<div class="flex flex-col gap-6 w-full @[864px]:max-w-[540px]">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container text-secondary text-xs font-semibold uppercase tracking-wider w-fit">
+<span class="w-1.5 h-1.5 rounded-full bg-primary"></span>
+              Curated Essentials
+            </div>
+<div class="flex flex-col gap-3 text-left">
+<h1 class="text-on-surface text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.1] tracking-[-0.033em]">
+                Elevate Your Study Routine
+              </h1>
+<p class="text-secondary text-base sm:text-lg font-normal leading-relaxed max-w-lg">
+                Minimalist, premium tools and essentials crafted to enhance focus and everyday productivity.
+              </p>
+</div>
+<div class="flex flex-wrap items-center gap-3 pt-2">
+<button class="flex min-w-[130px] cursor-pointer items-center justify-center rounded-lg h-12 px-6 bg-primary text-on-primary text-base font-semibold leading-normal tracking-[0.01em] hover:opacity-95 shadow-sm transition-all active:scale-[0.98]">
+<span>Shop Essentials</span>
+</button>
+<button class="flex min-w-[120px] cursor-pointer items-center justify-center rounded-lg h-12 px-5 bg-surface-container text-on-surface text-base font-medium leading-normal hover:bg-surface-container-high transition-colors">
+<span>View Lookbook</span>
+</button>
+</div>
+</div>
+<!-- Animated SVG Illustration on the Right -->
+<div class="w-full @[864px]:w-1/2 flex items-center justify-center rounded-xl bg-surface-container-low p-4 sm:p-6 overflow-hidden border border-outline-variant/30">
+<animated-svg class="w-full h-64 sm:h-72" src="{{DATA:ANIMATION:ANIMATION_11}}"></animated-svg>
+</div>
+</div>
+</section>
+<!-- Best Sellers Section -->
+<section class="py-8 sm:py-12 border-t border-surface-container-high">
+<div class="flex items-end justify-between mb-8">
+<div>
+<h2 class="text-on-surface text-2xl sm:text-3xl font-bold tracking-tight">Best Sellers</h2>
+<p class="text-secondary text-sm sm:text-base mt-1">Refined objects made to endure rigorous everyday thought.</p>
+</div>
+<a class="text-primary hover:text-on-primary-container text-sm font-semibold inline-flex items-center gap-1 group" href="#all">
+            See all
+            <span class="material-symbols-outlined text-[18px] transition-transform group-hover:translate-x-0.5">arrow_forward</span>
+</a>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Product Card 1: Brass Mechanical Pencil -->
+<article class="group flex flex-col gap-3 rounded-xl bg-surface-container-lowest p-3 border border-surface-container hover:border-outline-variant/60 transition-all duration-300 shadow-sm hover:shadow-md">
+<div class="relative w-full aspect-square bg-surface-container-low rounded-lg overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A premium weighted solid brass mechanical pencil resting on a textured linen workspace beside a smooth stone notebook weight. Gentle morning light streams across the minimalist desk highlighting the subtle metallic patina. Captured in a calm, modern editorial design aesthetic with soft muted sage greens and warm neutral tones." src="{{DATA:IMAGE:IMAGE_5}}"/>
+<span class="absolute top-2.5 left-2.5 bg-surface-container-lowest/90 backdrop-blur-md text-on-surface text-xs font-semibold px-2 py-0.5 rounded shadow-sm">
+                Solid Brass
+              </span>
+</div>
+<div class="flex flex-col flex-1 justify-between pt-1">
+<div>
+<p class="text-on-surface text-base font-semibold group-hover:text-primary transition-colors">Brass Mechanical Pencil</p>
+<p class="text-secondary text-sm font-normal mt-0.5">Precision balance with knurled grip</p>
+</div>
+<div class="flex items-center justify-between mt-3 pt-2 border-t border-surface-container">
+<span class="text-on-surface font-bold text-base">$28.00</span>
+<button aria-label="Add Brass Mechanical Pencil to cart" class="size-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Product Card 2: Linen Bound Planner -->
+<article class="group flex flex-col gap-3 rounded-xl bg-surface-container-lowest p-3 border border-surface-container hover:border-outline-variant/60 transition-all duration-300 shadow-sm hover:shadow-md">
+<div class="relative w-full aspect-square bg-surface-container-low rounded-lg overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="An exquisite Japanese binding linen-bound notebook in muted moss green resting flat on an oak surface. The archival quality cover weave is subtly captured with crisp natural light revealing fine embossing and ribbon bookmarks. Composed in an understated Scandinavian studio aesthetic with neutral organic colors." src="{{DATA:IMAGE:IMAGE_4}}"/>
+<span class="absolute top-2.5 left-2.5 bg-surface-container-lowest/90 backdrop-blur-md text-on-surface text-xs font-semibold px-2 py-0.5 rounded shadow-sm">
+                Archival Linen
+              </span>
+</div>
+<div class="flex flex-col flex-1 justify-between pt-1">
+<div>
+<p class="text-on-surface text-base font-semibold group-hover:text-primary transition-colors">Linen Bound Planner</p>
+<p class="text-secondary text-sm font-normal mt-0.5">120gsm fountain-pen friendly paper</p>
+</div>
+<div class="flex items-center justify-between mt-3 pt-2 border-t border-surface-container">
+<span class="text-on-surface font-bold text-base">$34.00</span>
+<button aria-label="Add Linen Bound Planner to cart" class="size-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Product Card 3: Matte Ceramic Desk Cup -->
+<article class="group flex flex-col gap-3 rounded-xl bg-surface-container-lowest p-3 border border-surface-container hover:border-outline-variant/60 transition-all duration-300 shadow-sm hover:shadow-md">
+<div class="relative w-full aspect-square bg-surface-container-low rounded-lg overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A handmade matte ceramic stationery cup in warm sand beige standing on a clean wooden tabletop holding clean drafting pens. Soft diffuse light illuminates the organic artisanal glaze and tactile texture. The scene is calm, uncluttered, and grounded in serene earthy tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGArzSDtzBj1ZFaBkr2LYOGjx3kYdGxw608UJARovuBGIFUBYeHdCP9sfu_Rvwi1AtkTzNFOJG9u4_3z-gtlSOdzKk5UG8BbgTWXvmQqLwDuHbu3xDWUiiEnfOwNzoUmXG-EsvIBuQ9m_LmZalvqtoLRxRPnPA9lgCHnME9g7p9yQS-WazubyJa0dlGlGHXbCE1YcclapYX1-zciTjT6g-xFWQIDA3rxGXIwok_lZcPxnhFZ7rbOKw0g"/>
+</div>
+<div class="flex flex-col flex-1 justify-between pt-1">
+<div>
+<p class="text-on-surface text-base font-semibold group-hover:text-primary transition-colors">Matte Ceramic Desk Cup</p>
+<p class="text-secondary text-sm font-normal mt-0.5">Hand-thrown stoneware organizer</p>
+</div>
+<div class="flex items-center justify-between mt-3 pt-2 border-t border-surface-container">
+<span class="text-on-surface font-bold text-base">$22.00</span>
+<button aria-label="Add Matte Ceramic Desk Cup to cart" class="size-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+</article>
+<!-- Product Card 4: Anodized Aluminum Ruler -->
+<article class="group flex flex-col gap-3 rounded-xl bg-surface-container-lowest p-3 border border-surface-container hover:border-outline-variant/60 transition-all duration-300 shadow-sm hover:shadow-md">
+<div class="relative w-full aspect-square bg-surface-container-low rounded-lg overflow-hidden flex items-center justify-center">
+<img class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="A sleek matte olive anodized aluminum triangular scale ruler placed diagonally across clean grid paper. Razor-sharp laser etched measurement markings catch delicate ambient sunrays, highlighting precise industrial craftsmanship and elegant minimalist desk aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBG6TVAv5LTCkMqtUXxQ8mKQ7eqlf_aJo7Y1Gt0mEfjKkTakN9IY-DrlIVmDhivm1U9YnIPZDLVzMyWJqIJrx3HI0PYnoP3H6SIMohgAU0_JyckpYhxcp72uvbX7QkzZIkhfwAT1FZX1XD-8Gsr5TkcZPFXst5ilL_P7svZOW6AekVxUN_utGOaflwvyzRsd_zQ45TO8SWr09_ICfBT6p-GBHvCDkLOWu8qdqlxr26GLNbamuAdFl02xQ"/>
+</div>
+<div class="flex flex-col flex-1 justify-between pt-1">
+<div>
+<p class="text-on-surface text-base font-semibold group-hover:text-primary transition-colors">Architectural Scale Ruler</p>
+<p class="text-secondary text-sm font-normal mt-0.5">Laser-etched anodized finish</p>
+</div>
+<div class="flex items-center justify-between mt-3 pt-2 border-t border-surface-container">
+<span class="text-on-surface font-bold text-base">$19.00</span>
+<button aria-label="Add Architectural Scale Ruler to cart" class="size-8 rounded-lg bg-surface-container flex items-center justify-center text-on-surface hover:bg-primary hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[18px]">add</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+</section>
+<!-- Curated Collections Section -->
+<section class="py-8 sm:py-12 border-t border-surface-container-high pb-20">
+<div class="flex items-center justify-between mb-6">
+<h2 class="text-on-surface text-2xl sm:text-3xl font-bold tracking-tight">Curated Collections</h2>
+<span class="text-secondary text-sm">3 series available</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="group relative rounded-xl overflow-hidden bg-surface-container-low border border-surface-container p-6 flex flex-col justify-end min-h-[220px] hover:border-primary-container transition-all">
+<div class="relative z-10">
+<span class="text-xs font-semibold text-primary uppercase tracking-wider">Series 01</span>
+<h3 class="text-on-surface text-xl font-bold mt-1">Deep Work Essentials</h3>
+<p class="text-secondary text-sm mt-1">Sound-dampening desk mats and distraction-free timepieces.</p>
+</div>
+</div>
+<div class="group relative rounded-xl overflow-hidden bg-surface-container-low border border-surface-container p-6 flex flex-col justify-end min-h-[220px] hover:border-primary-container transition-all">
+<div class="relative z-10">
+<span class="text-xs font-semibold text-primary uppercase tracking-wider">Series 02</span>
+<h3 class="text-on-surface text-xl font-bold mt-1">Analog Archive</h3>
+<p class="text-secondary text-sm mt-1">Bound notebooks, leather folios, and brass fasteners.</p>
+</div>
+</div>
+<div class="group relative rounded-xl overflow-hidden bg-surface-container-low border border-surface-container p-6 flex flex-col justify-end min-h-[220px] hover:border-primary-container transition-all">
+<div class="relative z-10">
+<span class="text-xs font-semibold text-primary uppercase tracking-wider">Series 03</span>
+<h3 class="text-on-surface text-xl font-bold mt-1">Ergonomic Balance</h3>
+<p class="text-secondary text-sm mt-1">Solid birch monitor risers and natural wool arm rests.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- Clean Minimalist Footer -->
+<footer class="bg-surface-container-low border-t border-surface-container-high py-10 px-4 sm:px-8">
+<div class="max-w-[1280px] mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-secondary">
+<p>© 2025 StudySpace Studio. Designed for intentional practice.</p>
+<div class="flex items-center gap-6">
+<a class="hover:text-on-surface transition-colors" href="#">Privacy</a>
+<a class="hover:text-on-surface transition-colors" href="#">Terms of Craft</a>
+<a class="hover:text-on-surface transition-colors" href="#">Sustainability</a>
+</div>
+</div>
+</footer>
+</div>
+</body></html>
